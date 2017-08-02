@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>A Simple Train Scheduler Activity</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="A simple train schedule activity using FireBase and incorporating the ability to add children to a database" />
+		<meta name="keyword" content="javascript, jQuery, FireBase, train, scheduler" />
+		<meta name="author" content="Bonnie L. Hoffman, bonnieho@rice.edu" />
+		<meta name="robots" content="noindex, nofollow" />
+		<!-- <link rel="shortcut icon" type="image/xicon" href="" /> -->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
+
+    	<!-- Bootstrap -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
+
+		<script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+		<!-- Link to Moment.js should go here -->
+  		<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	</head>
+
+	<body>
+		 <!-- Main Bootstrap Search -->
+		 <div class="container">
+
+
+		 <!-- <div class="jumbotron" style="background-color: #20315A ; color: white;"> -->
+		 <br>
+
+		  <!-- Jumbotron for Title -->
+		  <div class="jumbotron">
+		    <h1 class="text-center">Anytime is Train Time</h1>
+		    <h2 class="text-center">Chew. Chew. Who. Knew?</h2>
+		  </div>
+
+		  <div class="row">
+
+		    <!-- Sign-Up Panel-->
+		    <div class="col-lg-12">
+		      <div class="panel panel-default">
+		        <div class="panel-heading">
+		          <h3 class="panel-title">Current Train Schedule</h3>
+		        </div>
+
+		        <div class="panel-body">
+
+		       		<!-- Current Train Schedule -->
+					<div class="row">
+      				<div class="col-lg-3 th-look">Train Name</div>
+      				<div class="col-lg-3 th-look">Destination</div>
+      				<div class="col-lg-2 th-look">Frequency (min)</div>
+      				<div class="col-lg-2 th-look">Next Arrival</div>
+      				<div class="col-lg-2 th-look">Minutes Away</div>
+		          	</div>
+		          	<div id="full-train-list"></div>
+
+		        </div>
+
+		      </div>
+
+		    </div>
+
+		    <!-- Add Train Panel -->
+		    <div class="col-lg-12">
+		      <div class="panel panel-default">
+		        <div class="panel-heading">
+		          <h3 class="panel-title">Add Train</h3>
+		        </div>
+		        <div class="panel-body" id="add-train">
+		          <form role="form">
+		            <div class="form-group">
+		              <label for="name-input">Train Name</label>
+		              <input class="form-control" id="name-input" type="text">
+		            </div>
+		            <div class="form-group">
+		              <label for="destination-input">Destination</label>
+		              <input class="form-control" id="destination-input" type="text">
+		            </div>
+		            <div class="form-group">
+		              <label for="first-time-input">First Train Time (HH:mm - military time)</label>
+		              <input class="form-control" id="first-time-input" type="text">
+		            </div>
+		            <div class="form-group">
+		             <label for="frequency-input">Frequency (min)</label>
+		              <input class="form-control" id="frequency-input" type="number">
+		             </div>
+		            <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+		          </form>
+		        </div>
+		      </div>
+		    </div>
+
+		   
+
+
+		<!-- jQuery JS -->
+  		<script src="https://code.jquery.com/jquery.js"></script>
+
+		<!-- link to external javascript document -->
+		<script src="assets/javascript/train.js"></script>
+
+	</body>
+</html>

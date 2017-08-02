@@ -1,0 +1,31 @@
+/* These are the custom styles for a class project game created in Javascript
+Author: Bonnie L. Hoffman - bonnieho@rice.edu */
+
+/* main div to hold the children together  */
+
+/* body {
+	font-family: arial, helvetica, sans-serif;
+	color: #999;
+} */
+
+.th-look {
+	font-weight: bold;
+	font-size: 90%;
+}
+
+.panel-heading {
+	background-color: #339;
+}
+
+.panel-title {
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
